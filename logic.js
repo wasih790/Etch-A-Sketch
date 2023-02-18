@@ -73,7 +73,7 @@ let box = document.getElementsByClassName('box');
 // practice hover effect, only when pressing the button play
 const play = document.querySelector('#play');
 play.addEventListener('click', () => {
-for (let i = 0; i < 256; i++){
+for (let i = 0; i < box.length; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: blue;}`)});
 
 };
@@ -82,7 +82,7 @@ for (let i = 0; i < 256; i++){
 // change to random color when pressed 
 const crazy = document.querySelector('#crazy');
 crazy.addEventListener('click', () => {
-for (let i = 0; i < 256; i++){
+for (let i = 0; i < box.length; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: ${randomColor()}`)});
 
 };
@@ -98,7 +98,7 @@ restart.addEventListener('click', () => {window.location.reload()});
 // erase the colors and back to white
 const btnErase = document.querySelector('#erase');
 btnErase.addEventListener('click', () => {
-for (let i = 0; i < 256; i++){
+for (let i = 0; i < box.length; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: white;}`)});
 
 };
