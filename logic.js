@@ -14,7 +14,6 @@ function createColumn(){
         // creating 16 boxes per column
     const box = document.createElement('div')
     box.classList.add('box');
-    box.textContent = `${i}`
     column.appendChild(box);
     }
 
@@ -25,7 +24,16 @@ function createColumn(){
 // creating 16 columns
 // creating 16 x 16 grid
 for (let i = 0; i < 16; i++){
-createColumn();
+    column = createColumn();
 }
 
 
+let box = document.getElementsByClassName('box');
+
+// practice hover effect
+
+for (let i = 0; i < 256; i++){
+    box[i].addEventListener('mouseenter', () => {box[i].textContent = "Enter";});
+
+    box[i].addEventListener('mouseleave', () => { box[i].textContent = ""});
+};
