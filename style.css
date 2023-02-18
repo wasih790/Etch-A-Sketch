@@ -1,19 +1,27 @@
 *{
     box-sizing: border-box;
     margin: 0px;
-    background-color: #000;
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid red;
+    border: 5px solid red;  
+    width: 570px;
+    height: 570px;
+    border-radius: 10px;
 }
 
 .column{
     display: flex;
     flex-direction: column;
+
 }
 
 .box{
@@ -21,8 +29,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 1px solid #3882f6;
-    width: 40px;
-    height: 40px;
-    color: #fff;
+    border: 1px solid grey;
+    width: 35px;
+    height: 35px;
 }

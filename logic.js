@@ -5,6 +5,15 @@ container.classList.add('container');
 
 body.appendChild(container);
 
+const btnRow = document.createElement('div');
+btnRow.classList.add('btnRow');
+body.appendChild(btnRow);
+// create a row for buttons
+const button = document.createElement('button');
+button.classList.add('restart');
+button.textContent = "Restart";
+btnRow.appendChild(button)
+
 //creating a column to hold a box/boxes
 function createColumn(){
     // creating 1 column
@@ -33,13 +42,18 @@ function randomColor(){
 
 
 
-console.log(randomColor())
 let box = document.getElementsByClassName('box');
 // practice hover effect
 
+for (let i = 0; i < 256; i++){
+    box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: blue;}`)});
+
+};
+
+/*
 for (let i = 0; i < 256; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: ${randomColor()}`)});
 
     box[i].addEventListener('mouseleave', () => {box[i].setAttribute("style", 'background-color:black;')});
 };
-
+*/
