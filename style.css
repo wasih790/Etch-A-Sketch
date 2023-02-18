@@ -1,10 +1,14 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
+    background-color: #000;
 }
 
 .container{
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+    border: 5px solid red;
 }
 
 .column{
@@ -17,7 +21,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 3px solid #3882f6;
-    width: 50px;
-    height: 50px;
+    border: 1px solid #3882f6;
+    width: 40px;
+    height: 40px;
+    color: #fff;
 }
