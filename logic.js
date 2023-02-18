@@ -10,9 +10,15 @@ btnRow.classList.add('btnRow');
 body.appendChild(btnRow);
 // create a row for buttons
 const button = document.createElement('button');
-button.classList.add('restart');
+button.setAttribute('id','restart');
 button.textContent = "Restart";
 btnRow.appendChild(button)
+
+const rainbow = document.createElement('button');
+rainbow.setAttribute('id','crazy');
+rainbow.textContent = "Crazy Color";
+btnRow.appendChild(rainbow)
+
 
 //creating a column to hold a box/boxes
 function createColumn(){
@@ -50,10 +56,16 @@ for (let i = 0; i < 256; i++){
 
 };
 
-/*
+const btn = document.querySelector('#crazy');
+btn.addEventListener('click', () => {
 for (let i = 0; i < 256; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: ${randomColor()}`)});
 
-    box[i].addEventListener('mouseleave', () => {box[i].setAttribute("style", 'background-color:black;')});
+    box[i].addEventListener('mouseleave', () => {box[i].setAttribute("style", `background-color:${randomColor()}`)});
+
+
 };
-*/
+});
+
+const restart = document.querySelector('#restart');
+restart.addEventListener('click', () => {window.location.reload()});
