@@ -27,13 +27,19 @@ for (let i = 0; i < 16; i++){
     column = createColumn();
 }
 
+function randomColor(){
+ return "#"+((1<<24)*Math.random()|0).toString(16); 
+}
 
+
+
+console.log(randomColor())
 let box = document.getElementsByClassName('box');
-
 // practice hover effect
 
 for (let i = 0; i < 256; i++){
-    box[i].addEventListener('mouseenter', () => {box[i].textContent = "Enter";});
+    box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: ${randomColor()}`)});
 
-    box[i].addEventListener('mouseleave', () => { box[i].textContent = ""});
+    box[i].addEventListener('mouseleave', () => {box[i].setAttribute("style", 'background-color:black;')});
 };
+
