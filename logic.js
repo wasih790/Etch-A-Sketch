@@ -10,6 +10,10 @@ const column = document.createElement('div');
 column.classList.add('column');
 container.appendChild(column);
 
-const box = document.createElement('div')
-box.classList.add('box');
-column.appendChild(box)
+// creating a box
+for (let i = 0; i < 16; i++){
+    const box = document.createElement('div')
+    box.classList.add('box');
+    box.textContent = `${i}`;
+    column.appendChild(box)
+}
