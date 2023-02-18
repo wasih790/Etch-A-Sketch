@@ -6,14 +6,26 @@ container.classList.add('container');
 body.appendChild(container);
 
 //creating a column to hold a box/boxes
-const column = document.createElement('div');
-column.classList.add('column');
-container.appendChild(column);
-
-// creating a box
-for (let i = 0; i < 16; i++){
+function createColumn(){
+    // creating 1 column
+    const column = document.createElement('div');
+    column.classList.add('column');
+    for (let i = 0; i < 16; i++){
+        // creating 16 boxes per column
     const box = document.createElement('div')
     box.classList.add('box');
-    box.textContent = `${i}`;
-    column.appendChild(box)
+    box.textContent = `${i}`
+    column.appendChild(box);
+    }
+
+    return container.appendChild(column);
 }
+
+
+// creating 16 columns
+// creating 16 x 16 grid
+for (let i = 0; i < 16; i++){
+createColumn();
+}
+
+
