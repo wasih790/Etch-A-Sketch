@@ -12,13 +12,22 @@ body.appendChild(btnRow);
 const button = document.createElement('button');
 button.setAttribute('id','restart');
 button.textContent = "Restart";
-btnRow.appendChild(button)
+btnRow.appendChild(button);
 
+
+// made a button for crazy colors
 const rainbow = document.createElement('button');
 rainbow.setAttribute('id','crazy');
 rainbow.textContent = "Crazy Color";
 btnRow.appendChild(rainbow)
 
+
+// erase button
+
+const erase = document.createElement('button');
+erase.setAttribute('id','erase');
+erase.textContent = "Eraser";
+btnRow.appendChild(erase)
 
 //creating a column to hold a box/boxes
 function createColumn(){
@@ -61,7 +70,7 @@ btn.addEventListener('click', () => {
 for (let i = 0; i < 256; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: ${randomColor()}`)});
 
-    box[i].addEventListener('mouseleave', () => {box[i].setAttribute("style", `background-color:${randomColor()}`)});
+    // box[i].addEventListener('mouseleave', () => {box[i].setAttribute("style", `background-color:${randomColor()}`)});
 
 
 };
@@ -69,3 +78,11 @@ for (let i = 0; i < 256; i++){
 
 const restart = document.querySelector('#restart');
 restart.addEventListener('click', () => {window.location.reload()});
+
+const btnErase = document.querySelector('#erase');
+btnErase.addEventListener('click', () => {
+for (let i = 0; i < 256; i++){
+    box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: white;}`)});
+
+};
+});
