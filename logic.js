@@ -9,10 +9,21 @@ const btnRow = document.createElement('div');
 btnRow.classList.add('btnRow');
 body.appendChild(btnRow);
 // create a row for buttons
+
+// play button
+const btnPlay = document.createElement('button');
+btnPlay.setAttribute('id','play');
+btnPlay.textContent = "Play";
+btnRow.appendChild(btnPlay);
+
+// restart
 const button = document.createElement('button');
 button.setAttribute('id','restart');
 button.textContent = "Restart";
 btnRow.appendChild(button);
+
+
+
 
 
 // made a button for crazy colors
@@ -58,27 +69,33 @@ function randomColor(){
 
 
 let box = document.getElementsByClassName('box');
-// practice hover effect
 
+// practice hover effect, only when pressing the button play
+const play = document.querySelector('#play');
+play.addEventListener('click', () => {
 for (let i = 0; i < 256; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: blue;}`)});
 
 };
+});
 
-const btn = document.querySelector('#crazy');
-btn.addEventListener('click', () => {
+// change to random color when pressed 
+const crazy = document.querySelector('#crazy');
+crazy.addEventListener('click', () => {
 for (let i = 0; i < 256; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: ${randomColor()}`)});
-
-    // box[i].addEventListener('mouseleave', () => {box[i].setAttribute("style", `background-color:${randomColor()}`)});
-
 
 };
 });
 
+
+
+
 const restart = document.querySelector('#restart');
 restart.addEventListener('click', () => {window.location.reload()});
 
+
+// erase the colors and back to white
 const btnErase = document.querySelector('#erase');
 btnErase.addEventListener('click', () => {
 for (let i = 0; i < 256; i++){
