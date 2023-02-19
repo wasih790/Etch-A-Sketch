@@ -1,7 +1,7 @@
 let body = document.body
 // adding a container div to the body 
 const container = document.createElement('div');
-container.classList.add('container');
+container.setAttribute('id','container');
 
 body.appendChild(container);
 
@@ -39,6 +39,12 @@ const erase = document.createElement('button');
 erase.setAttribute('id','erase');
 erase.textContent = "Eraser";
 btnRow.appendChild(erase)
+
+
+const btnGrid = document.createElement('button');
+btnGrid.setAttribute('id','grid');
+btnGrid.textContent = "Change Grid";
+btnRow.appendChild(btnGrid)
 
 
 
@@ -117,4 +123,19 @@ for (let i = 0; i < box.length; i++){
     box[i].addEventListener('mouseenter', () => {box[i].setAttribute("style", `background-color: white;}`)});
 
 };
+});
+
+
+const grid = document.querySelector('#grid');
+grid.addEventListener('click', () => {
+    const myNode = document.getElementById("container");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.lastChild);
+  }
+
+  let row = +prompt("How many rows?");
+  let column = +prompt("How many columns?")
+
+  createGrid(row,column)
+
 });

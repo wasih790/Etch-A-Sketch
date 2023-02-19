@@ -10,7 +10,7 @@ body {
     align-items: center;
 }
 
-.container{
+#container{
     display: flex;
     border: 5px solid red;  
     width: 570px;
