@@ -92,7 +92,11 @@ for (let i = 0; i < box.length; i++){
 
 
 const restart = document.querySelector('#restart');
-restart.addEventListener('click', () => {window.location.reload()});
+restart.addEventListener('click', () => {
+    for (let i = 0; i < box.length; i++){
+    box[i].setAttribute("style", `background-color: white;`);
+    }
+});
 
 
 // erase the colors and back to white
