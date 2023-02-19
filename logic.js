@@ -40,12 +40,16 @@ erase.setAttribute('id','erase');
 erase.textContent = "Eraser";
 btnRow.appendChild(erase)
 
+
+
+
+function createGrid(row, col){
 //creating a column to hold a box/boxes
 function createColumn(){
     // creating 1 column
     const column = document.createElement('div');
     column.classList.add('column');
-    for (let i = 0; i < 16; i++){
+    for (let i = 0; i < row; i++){
         // creating 16 boxes per column
     const box = document.createElement('div')
     box.classList.add('box');
@@ -58,9 +62,16 @@ function createColumn(){
 
 // creating 16 columns
 // creating 16 x 16 grid
-for (let i = 0; i < 16; i++){
+for (let i = 0; i < col; i++){
     column = createColumn();
 }
+
+}
+
+// creating the grid
+createGrid(16,16)
+
+
 
 function randomColor(){
  return "#"+((1<<24)*Math.random()|0).toString(16); 
