@@ -1,14 +1,16 @@
 let body = document.body
+const btnRow = document.createElement('div');
+btnRow.classList.add('btnRow');
+body.appendChild(btnRow);
+// create a row for buttons
+
 // adding a container div to the body 
 const container = document.createElement('div');
 container.setAttribute('id','container');
 
 body.appendChild(container);
 
-const btnRow = document.createElement('div');
-btnRow.classList.add('btnRow');
-body.appendChild(btnRow);
-// create a row for buttons
+
 
 // play button
 const btnPlay = document.createElement('button');
