@@ -145,8 +145,9 @@ grid.addEventListener('click', () => {
     myNode.removeChild(myNode.lastChild);
   }
 
-  let row = +prompt("How many rows?");
-  let column = +prompt("How many columns?")
+
+  let row = +prompt("How many rows?, LIMIT 100");
+  let column = +prompt("How many columns? LIMIT 100")
 
   createGrid(row,column)
 
