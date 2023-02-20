@@ -1,8 +1,18 @@
 let body = document.body
+
+// title
+const title = document.createElement('div');
+title.setAttribute('id','title');
+title.textContent = "Etch-A-Sketch";
+body.appendChild(title);
+
+
 const btnRow = document.createElement('div');
 btnRow.classList.add('btnRow');
 body.appendChild(btnRow);
 // create a row for buttons
+
+
 
 // adding a container div to the body 
 const container = document.createElement('div');
